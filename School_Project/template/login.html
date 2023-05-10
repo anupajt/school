@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        label{
+              width:100px;
+              display:inline-block;
+              }
+        #login{
+               border-radius:10px;
+               background:rgba(0,0,0,0.6);
+               color:white;
+               width:280px;
+               padding:50px;
+               margin:auto;
+               position:relative;
+               top:150px;
+               left:130px;
+               }
+        h1{text-align:center;
+           position:relative;
+           top:-30px;
+           left:5px
+           }
+
+        #submit{
+                text-align:center;
+                width:99%;
+                margin-top:20px;
+                background:rgb(200,41,0);
+                border-radius:10px;
+                border:1px solid rgb(200,41,0);
+                color:white;
+                }
+
+    </style>
+</head>
+<body style="background:linear-gradient(305deg,orange,pink,yellow);width:1000px;height:600px;
+             background-size:cover;
+             background-repeat:no-repeat;">
+ <div id="login">
+   <h1>LOG IN</h1>
+   <form action="login" method="post">
+        {% csrf_token %}
+     <label>User_Name</label>
+     <input type="text" name="username"><br>
+     <label>Password</label>
+     <input type="password" name="password"><br>
+     <input type="submit" value="login" id="submit">
+     <p>Don't have an account yet? <a href="register" id="register-link">Register here</a></p>
+
+
+
+   </form>
+</div>
+</body>
+</html>
